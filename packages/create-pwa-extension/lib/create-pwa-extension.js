@@ -99,6 +99,7 @@ module.exports = async params => {
     console.log(`Creating a new PWA extension '${name}' in ${directory}`);
 
     await fse.copySync(template, directory);
+    await fse.copySync(directory+'/template.json', directory+'/package.json');
 
     const directoryPath = path.join(process.cwd(),directory);
     await fixJSON(directoryPath + '/package.json', "name", name)

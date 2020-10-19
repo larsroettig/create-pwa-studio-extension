@@ -1,6 +1,6 @@
 # Starter React PWA Studio extensions
 
-An extension starter for Magento PWA Studio includes all you need to build an amazing extension
+An extension generator for Magento PWA Studio includes all you need to build an amazing extension
 
 - 📏 **ESLint** - JavaScript linter
 - 💖 **Prettier** - Opinionated Code Formatter
