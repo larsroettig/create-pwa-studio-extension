@@ -29,7 +29,7 @@ async function makeDirFromNpmPackage(packageName) {
     try {
         console.log(`Finding ${packageName} tarball on NPM`);
         tarballUrl = JSON.parse(
-            execa.shellSync(`npm view --json ${packageName}`, {
+            execa.commandSync(`npm view --json ${packageName}`, {
                 encoding: 'utf-8'
             }).stdout
         ).dist.tarball;
