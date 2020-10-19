@@ -1,4 +1,4 @@
-# PWA Studio extension generator 
+# Starter React PWA Studio extensions
 
 An extension generator for Magento PWA Studio includes all you need to build an amazing extension
 
@@ -14,7 +14,7 @@ An extension generator for Magento PWA Studio includes all you need to build an 
 ## 🚀 Getting started
 
 ```bash
-yarn create @larsroettig/pwa-extension 
+yarn create @larsroettig/pwa-extension
 ```
 
 ```bash

@@ -65,12 +65,18 @@ module.exports = async () => {
             default: isYarn ? 'yarn' : 'npm'
         },
         {
+            name: 'template',
+            message: 'Template to use',
+            default: 'pwa-extension-template'
+        },
+        {
             name: 'install',
             type: 'confirm',
             message: ({npmClient}) =>
                 `Install package dependencies with ${npmClient} after creating project`,
             default: true
-        }
+        },
+
     ];
     let answers;
     try {

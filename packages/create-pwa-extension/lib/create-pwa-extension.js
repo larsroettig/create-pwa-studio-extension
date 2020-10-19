@@ -10,7 +10,7 @@ const path = require('path')
 const tmpDir = os.tmpdir();
 
 const templateAliases = {
-    'pwa-studio-extension-starter': {
+    'pwa-extension-template': {
         npm: '@larsroettig/pwa-extension-template',
         dir: resolve(__dirname, '../../pwa-extension-template')
     }
@@ -89,19 +89,18 @@ async function fixJSON(file, key, value) {
         const json = JSON.parse(fs.readFileSync(file));
         json[key] = value;
         fs.writeFileSync(file, JSON.stringify(json, null, "  "));
-        console.log('Fix:', file, 'Key:', key);
     } catch (e) {
         console.log('Error: Cannot fix the JSON', file, key, value);
     }
 }
 
 module.exports = async params => {
-    const {directory, name, author} = params;
-    const template = await findTemplateDir('pwa-studio-extension-starter')
+    const {directory, name, author, template} = params;
+    const templateDir = await findTemplateDir(template)
 
     console.log(`Creating a new PWA extension '${name}' in ${directory}`);
 
-    await fse.copySync(template, directory);
+    await fse.copySync(templateDir, directory);
     await fse.copySync(directory+'/template.json', directory+'/package.json');
 
     const directoryPath = path.join(process.cwd(),directory);
