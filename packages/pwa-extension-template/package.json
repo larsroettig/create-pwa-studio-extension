@@ -1,7 +1,7 @@
 {
   "name": "@larsroettig/pwa-extension-template",
   "author": "Lars Roettig <hello@larsroettig.de>",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "license": "MIT",
   "main": "src/index.js",
   "pwa-studio": {

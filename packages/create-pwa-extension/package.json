@@ -1,12 +1,9 @@
 {
   "name": "@larsroettig/create-pwa-extension",
   "author": "Lars Roettig <hello@larsroettig.de>",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "keywords": [
     "react",
-    "create-react-app",
-    "template",
-    "magento",
     "pwa-studio",
     "extension"
   ],
@@ -18,11 +15,11 @@
   "bin": "./bin/create-pwa-extension",
   "repository": {
     "type": "git",
-    "url": "https://github.com/larsroettig/cra-template-pwa-studio-extension"
+    "url": "https://github.com/larsroettig/create-pwa-studio-extension"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/larsroettig/cra-template-pwa-studio-extension/issues"
+    "url": "https://github.com/larsroettig/create-pwa-studio-extension/issues"
   },
   "dependencies": {
     "chalk": "^2.4.2",
