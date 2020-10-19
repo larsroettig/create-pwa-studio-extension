@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/larsroettig/create-pwa-studio-extension/blob/main/static/starter_img.jpg">
+  <img src="https://raw.githubusercontent.com/larsroettig/create-pwa-studio-extension/main/static/starter_img.jpg">
 </p>
 
 
@@ -27,5 +27,5 @@ npm init @magento/pwa
 ```
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/larsroettig/create-pwa-studio-extension/blob/main/static/console.png">
+  <img src="https://raw.githubusercontent.com/larsroettig/create-pwa-studio-extension/main/static/console.png">
 </p>
