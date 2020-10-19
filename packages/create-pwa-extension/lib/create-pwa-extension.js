@@ -8,7 +8,7 @@ const tmpDir = os.tmpdir();
 
 const templateAliases = {
     'pwa-studio-extension-starter': {
-        npm: '@larsroettig/pwa-studio-extension-starter',
+        npm: '@larsroettig/pwa-extension-template',
         dir: resolve(__dirname, '../../pwa-extension-template')
     }
 };
