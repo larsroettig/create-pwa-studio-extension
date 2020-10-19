@@ -1,0 +1,42 @@
+{
+  "name": "@larsroettig/create-pwa-extension",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "packages/create-pwa-extension",
+    "packages/pwa-extension-template"
+  ],
+  "scripts": {
+    "format": "prettier --ignore-path .gitignore \"src/**/*.+(ts|js|tsx)\" --write",
+    "lint": "eslint --ignore-path .gitignore 'src/**/{*.js,package.json}'"
+  },
+  "lint-staged": {
+    "./src/**/*.{ts,js,jsx,tsx}": [
+      "yarn lint --fix",
+      "yarn format"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "devDependencies": {
+    "lerna": "^3.22.1",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.0.8",
+    "prettier": "^1.9.2",
+    "prettier-check": "^2.0.0",
+    "babel-eslint": "~10.0.1",
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-package-json": "^0.1.4",
+    "eslint-plugin-react": "^7.9.1",
+    "eslint-plugin-react-hooks": "^1.6.0"
+  },
+  "engines": {
+    "node": ">=10.x",
+    "yarn": ">=1.12.0"
+  }
+}

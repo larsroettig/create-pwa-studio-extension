@@ -1,0 +1,38 @@
+{
+  "name": "@larsroettig/create-pwa-extension",
+  "author": "Lars Roettig <hello@larsroettig.de>",
+  "version": "1.0.0",
+  "keywords": [
+    "react",
+    "create-react-app",
+    "template",
+    "magento",
+    "pwa-studio",
+    "extension"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "description": "Starter for amazing Magento PWA Studio extensions",
+  "main": "./lib/index.js",
+  "bin": "./bin/create-pwa-extension",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/larsroettig/cra-template-pwa-studio-extension"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/larsroettig/cra-template-pwa-studio-extension/issues"
+  },
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "fs-extra": "^9.0.1",
+    "git-user-info": "^1.0.1",
+    "inquirer": "^6.3.1",
+    "install": "^0.13.0",
+    "is-invalid-path": "^1.0.2",
+    "is-valid-npm-name": "^0.0.4",
+    "webpack": "^4.29.5",
+    "execa": "^4.0.3"
+  }
+}
