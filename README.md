@@ -1,3 +1,8 @@
+<p align="center">
+  <img src="https://raw.githubusercontent.com/larsroettig/create-pwa-studio-extension/blob/main/static/starter_img.jpg">
+</p>
+
+
 # PWA Studio extension generator 
 
 An extension generator for Magento PWA Studio includes all you need to build an amazing extension
@@ -20,3 +25,7 @@ yarn create @larsroettig/pwa-extension
 ```bash
 npm init @magento/pwa
 ```
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/larsroettig/create-pwa-studio-extension/blob/main/static/console.png">
+</p>
