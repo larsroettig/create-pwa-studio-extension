@@ -1,7 +1,7 @@
 {
   "name": "@larsroettig/create-pwa-extension",
   "author": "Lars Roettig <hello@larsroettig.de>",
-  "version": "0.0.1",
+  "version": "1.0.0-alpha.1",
   "keywords": [
     "react",
     "pwa-studio",
@@ -23,13 +23,13 @@
   },
   "dependencies": {
     "chalk": "^2.4.2",
+    "execa": "^4.0.3",
     "fs-extra": "^9.0.1",
     "git-user-info": "^1.0.1",
     "inquirer": "^6.3.1",
     "install": "^0.13.0",
     "is-invalid-path": "^1.0.2",
     "is-valid-npm-name": "^0.0.4",
-    "webpack": "^4.29.5",
-    "execa": "^4.0.3"
+    "webpack": "^4.29.5"
   }
 }
