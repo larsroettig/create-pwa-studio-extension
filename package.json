@@ -4,7 +4,7 @@
   "private": true,
   "workspaces": [
     "packages/create-pwa-extension",
-    "packages/pwa-extension-template"
+    "packages/cpse-template"
   ],
   "scripts": {
     "format": "prettier --ignore-path .gitignore \"src/**/*.+(ts|js|tsx)\" --write",
