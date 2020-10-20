@@ -1,7 +1,7 @@
 {
   "name": "@larsroettig/create-pwa-extension",
   "author": "Lars Roettig <hello@larsroettig.de>",
-  "version": "1.0.6",
+  "version": "1.1.0",
   "keywords": [
     "react",
     "pwa-studio",
