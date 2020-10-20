@@ -10,9 +10,9 @@ const path = require('path')
 const tmpDir = os.tmpdir();
 
 const templateAliases = {
-    'pwa-extension-template': {
-        npm: '@larsroettig/pwa-extension-template',
-        dir: resolve(__dirname, '../../pwa-extension-template')
+    '@larsroettig/cpse-template': {
+        npm: '@larsroettig/cpse-template',
+        dir: resolve(__dirname, '../../cpse-template')
     }
 };
 

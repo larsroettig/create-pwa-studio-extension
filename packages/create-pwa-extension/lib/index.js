@@ -67,7 +67,7 @@ module.exports = async () => {
         {
             name: 'template',
             message: 'Template to use',
-            default: 'pwa-extension-template'
+            default: '@larsroettig/cpse-template'
         },
         {
             name: 'install',
