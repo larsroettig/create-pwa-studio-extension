@@ -29,7 +29,7 @@
     "inquirer": "^6.3.1",
     "install": "^0.13.0",
     "is-invalid-path": "^1.0.2",
-    "is-valid-npm-name": "^0.0.4",
+    "is-valid-npm-name": "^0.0.5",
     "node-fetch": "^2.6.1",
     "tar": "^6.0.5",
     "webpack": "^4.29.5"
