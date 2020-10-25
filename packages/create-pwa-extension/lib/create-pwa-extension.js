@@ -73,7 +73,6 @@ async function makeDirFromNpmPackage(packageName) {
     tarballStream.on("error", rej);
   });
 }
-
 async function findTemplateDir(templateName) {
   const template = templateAliases[templateName] || {
     npm: templateName,
@@ -89,7 +88,7 @@ async function findTemplateDir(templateName) {
   }
 }
 
-async function fixJSON(file, key, value) {
+function fixJSON(file, key, value) {
   try {
     logger.debug(`Try Change ${key} in ${file} to ${value}`);
     const json = JSON.parse(fs.readFileSync(file));
@@ -101,19 +100,17 @@ async function fixJSON(file, key, value) {
   }
 }
 
-async function copyTemplates(directory) {
-  const forFiles = function(err, files) {
-    files.forEach(template => {
-      const templatePath = path.join(directory, template);
-      const filePath = templatePath
-        .split(".")
-        .slice(0, -1)
-        .join(".");
-      fse.copySync(templatePath, filePath);
-      fse.remove(templatePath);
-    });
-  };
-  glob("**/*.template", { cwd: directory }, forFiles);
+function copyTemplates(directory) {
+  const files = glob.sync("**/*.template", { cwd: directory });
+  files.forEach(template => {
+    const templatePath = path.join(directory, template);
+    const filePath = templatePath
+      .split(".")
+      .slice(0, -1)
+      .join(".");
+    fse.copySync(templatePath, filePath);
+    fse.remove(templatePath);
+  });
 }
 
 module.exports = async params => {
@@ -124,11 +121,11 @@ module.exports = async params => {
 
   const templateDir = await findTemplateDir(template);
   await fse.copySync(templateDir, directory);
-  await copyTemplates(directory);
+  copyTemplates(directory);
 
   const directoryPath = path.join(process.cwd(), directory);
-  await fixJSON(`${directoryPath}/package.json`, "name", name);
-  await fixJSON(`${directoryPath}/package.json`, "author", author);
+  fixJSON(`${directoryPath}/package.json`, "name", name);
+  fixJSON(`${directoryPath}/package.json`, "author", author);
 
   // Install the project if instructed to do so.
   if (params.install) {
