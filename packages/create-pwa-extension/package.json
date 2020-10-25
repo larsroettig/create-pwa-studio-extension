@@ -32,7 +32,10 @@
     "is-valid-npm-name": "^0.0.4",
     "node-fetch": "^2.6.1",
     "tar": "^6.0.5",
-    "webpack": "^4.29.5"
+    "webpack": "^4.29.5",
+    "glob": "^7.1.6",
+    "winston": "^3.3.3",
+    "minimist": "^1.2.5"
   },
   "gitHead": "9ed9838bbcb627fb01bb4ac0cfc3693d07e9b996"
 }
