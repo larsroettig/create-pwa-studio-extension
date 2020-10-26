@@ -1,7 +1,7 @@
 {
   "name": "@larsroettig/cpse-template",
   "author": "Lars Roettig <hello@larsroettig.de>",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "license": "UNLICENSED",
   "publishConfig": {
     "access": "public"
@@ -9,5 +9,5 @@
   "dependencies": {
     "@magento/eslint-config": "latest"
   },
-  "gitHead": "c8ee6def90476afc1843b6a65e3d0631d888a2dd"
+  "gitHead": "887ba6d3e8879b92d37389ceed009d3fb141c633"
 }

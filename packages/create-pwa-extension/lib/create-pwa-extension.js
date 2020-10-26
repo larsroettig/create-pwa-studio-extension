@@ -6,7 +6,7 @@ const execa = require("execa");
 const fs = require("fs");
 const fse = require("fs-extra");
 const path = require("path");
-const glob = require("glob");
+const fg = require("fast-glob");
 const { createLogger, format, transports } = require("winston");
 
 const tmpDir = os.tmpdir();
@@ -73,11 +73,16 @@ async function makeDirFromNpmPackage(packageName) {
     tarballStream.on("error", rej);
   });
 }
-async function findTemplateDir(templateName) {
+async function findTemplateDir(templateName, download = false) {
   const template = templateAliases[templateName] || {
     npm: templateName,
     dir: templateName
   };
+
+  if (download === true) {
+    return makeDirFromNpmPackage(template.npm);
+  }
+
   try {
     await fse.readdir(template.dir);
     logger.debug(`Found ${templateName} directory`);
@@ -101,29 +106,37 @@ function fixJSON(file, key, value) {
 }
 
 function copyTemplates(directory) {
-  const files = glob.sync("**/*.template", { cwd: directory });
+  const files = fg.sync("*.template", { cwd: directory, dot: true });
+
   files.forEach(template => {
     const templatePath = path.join(directory, template);
     const filePath = templatePath
       .split(".")
       .slice(0, -1)
       .join(".");
+    logger.debug(`Copy ${templatePath} to ${filePath}`);
     fse.copySync(templatePath, filePath);
+    logger.debug(`Remove ${templatePath}`);
     fse.remove(templatePath);
   });
 }
 
 module.exports = async params => {
-  const { directory, name, author, template, logLevel } = params;
+  const { directory, name, author, template, logLevel, download } = params;
   logger.level = logLevel;
   logger.info(`Creating a new PWA extension '${name}' in ${directory}`);
   logger.debug(`Params: ${JSON.stringify(params)}`);
 
-  const templateDir = await findTemplateDir(template);
+  const templateDir = await findTemplateDir(template, download);
   await fse.copySync(templateDir, directory);
   copyTemplates(directory);
 
   const directoryPath = path.join(process.cwd(), directory);
+
+  if (fs.existsSync(`${directoryPath}/LICENSE`)) {
+    fse.removeSync(`${directoryPath}/LICENSE`);
+  }
+
   fixJSON(`${directoryPath}/package.json`, "name", name);
   fixJSON(`${directoryPath}/package.json`, "author", author);
 
