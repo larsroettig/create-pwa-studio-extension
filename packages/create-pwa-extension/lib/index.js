@@ -85,5 +85,6 @@ module.exports = async () => {
     ? opts.template
     : "@larsroettig/cpse-template";
   answers.logLevel = opts.v ? "debug" : "info";
+  answers.download = opts.d ? true : false;
   create(answers);
 };

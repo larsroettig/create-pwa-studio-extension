@@ -26,7 +26,7 @@
     "execa": "^4.0.3",
     "fs-extra": "^9.0.1",
     "git-user-info": "^1.0.1",
-    "glob": "^7.1.6",
+    "fast-glob": "3.2.4",
     "inquirer": "^6.3.1",
     "install": "^0.13.0",
     "is-invalid-path": "^1.0.2",
