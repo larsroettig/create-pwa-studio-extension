@@ -2,7 +2,7 @@
   "name": "@larsroettig/cpse-template",
   "author": "Lars Roettig <hello@larsroettig.de>",
   "version": "2.0.0",
-  "license": "MIT",
+  "license": "UNLICENSED",
   "publishConfig": {
     "access": "public"
   },
