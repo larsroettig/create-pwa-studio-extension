@@ -30,6 +30,7 @@ npm init @magento/pwa
 |----------|:-------------:|
 | --template @yournamespace/template | custom template for code generator | 
 | -v       | enable verbose log for code generator |  
+| -d       | debug download from node registry |  
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/larsroettig/create-pwa-studio-extension/main/static/console.png">
