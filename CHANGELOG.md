@@ -1,3 +1,14 @@
+### 2.0.2 (2020-10-26)
+
+##### New Features
+* allow to use moduleOverrideWebpackPlugin by @Frodigo
+
+#### Improve docs
+* new docs for custom template 
+
+##### Bug Fixes
+* Default `LICENSE` from npm needs to be removed
+
 ### 2.0.0 (2020-10-25)
 
 #### Breaking
