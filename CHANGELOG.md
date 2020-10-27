@@ -1,4 +1,4 @@
-### 2.0.2 (2020-10-26)
+### 2.0.2 (2020-10-27)
 
 ##### New Features
 * allow to use moduleOverrideWebpackPlugin by @Frodigo
