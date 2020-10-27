@@ -43,7 +43,10 @@ download packages via `npm view --json ${packageName}` for it should work for a 
 My starter template you can find here:
 https://github.com/larsroettig/create-pwa-studio-extension/tree/main/packages/cpse-template
 
-A minimal template need the following files:
+> :heavy_exclamation_mark:  Attention by default `LICENSE` will be delete from your template
+> but if you want to define `LICENSE` file you can use `LICENSE.template`
+
+**A minimal template need the following files:**
 **package.json**
 ```
 {
@@ -66,6 +69,8 @@ A minimal template need the following files:
   "main": "src/index.js",
 }
 ```
+
+#### Optional 
 
 **.gitignore.template**
 ```

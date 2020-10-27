@@ -73,6 +73,7 @@ async function makeDirFromNpmPackage(packageName) {
     tarballStream.on("error", rej);
   });
 }
+
 async function findTemplateDir(templateName, download = false) {
   const template = templateAliases[templateName] || {
     npm: templateName,
@@ -129,16 +130,17 @@ module.exports = async params => {
 
   const templateDir = await findTemplateDir(template, download);
   await fse.copySync(templateDir, directory);
-  copyTemplates(directory);
 
-  const directoryPath = path.join(process.cwd(), directory);
-
-  if (fs.existsSync(`${directoryPath}/LICENSE`)) {
-    fse.removeSync(`${directoryPath}/LICENSE`);
+  const lincesePath = path.join(process.cwd(), directory, "LICENSE");
+  if (lincesePath) {
+    fse.removeSync(lincesePath);
   }
 
-  fixJSON(`${directoryPath}/package.json`, "name", name);
-  fixJSON(`${directoryPath}/package.json`, "author", author);
+  copyTemplates(directory);
+
+  const packageJsonPath = path.join(process.cwd(), directory, "package.json");
+  fixJSON(packageJsonPath, "name", name);
+  fixJSON(packageJsonPath, "author", author);
 
   // Install the project if instructed to do so.
   if (params.install) {
@@ -149,5 +151,7 @@ module.exports = async params => {
     logger.debug(`Installed dependencies for '${name}' project`);
   }
 
-  logger.info(`Success created '${name}' in ${directoryPath}`);
+  logger.info(
+    `Success created '${name}' in ${path.join(process.cwd(), directory)}`
+  );
 };
