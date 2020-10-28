@@ -1,5 +1,6 @@
 const config = {
-  singleQuote: true
+    singleQuote: true,
+    tabWidth: 4
 };
 
 module.exports = config;
