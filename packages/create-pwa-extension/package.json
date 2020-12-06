@@ -22,20 +22,27 @@
     "url": "https://github.com/larsroettig/create-pwa-studio-extension/issues"
   },
   "dependencies": {
-    "chalk": "^2.4.2",
-    "execa": "^4.0.3",
+    "chalk": "^4.1.0",
+    "execa": "^5.0.0",
     "fast-glob": "3.2.4",
     "fs-extra": "^9.0.1",
     "git-user-info": "^1.0.1",
-    "prompts": "2.4.0",
     "install": "^0.13.0",
     "is-invalid-path": "^1.0.2",
     "is-valid-npm-name": "^0.0.5",
     "minimist": "^1.2.5",
     "node-fetch": "^2.6.1",
+    "prompts": "2.4.0",
     "tar": "^6.0.5",
     "webpack": "^5.1.1",
     "winston": "^3.3.3"
   },
-  "gitHead": "9ed9838bbcb627fb01bb4ac0cfc3693d07e9b996"
+  "gitHead": "9ed9838bbcb627fb01bb4ac0cfc3693d07e9b996",
+  "devDependencies": {
+    "babel-eslint": "~10.1.0",
+    "eslint": "^7.15.0",
+    "eslint-config-prettier": "^7.0.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "prettier": "^2.2.1"
+  }
 }
