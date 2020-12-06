@@ -81,7 +81,6 @@ module.exports = async () => {
   try {
     answers = await prompts(questions);
   } catch (e) {
-    console.log(e);
     console.error('App creation cancelled.');
   }
 

@@ -1,10 +1,15 @@
+### 3.0.0 (2020-12-06)
+
+##### New Features
+* Better Perfomance `replace inquirer with prompts`
+
 ### 2.0.2 (2020-10-27)
 
 ##### New Features
 * allow to use moduleOverrideWebpackPlugin by @Frodigo
 
 #### Improve docs
-* new docs for custom template 
+* new docs for custom template
 
 ##### Bug Fixes
 * Default `LICENSE` from npm needs to be removed
@@ -16,8 +21,8 @@
 * support own templates with parameter `--template @yournamespace/template`
 
 ##### New Features
-* allow to `.template` for files 
-* support verbose logging via parameter `-v` 
+* allow to `.template` for files
+* support verbose logging via parameter `-v`
 
 ##### Bug Fixes
 * .gitignore was not created for templates
