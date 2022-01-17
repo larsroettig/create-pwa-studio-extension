@@ -31,7 +31,7 @@
     "is-invalid-path": "^1.0.2",
     "is-valid-npm-name": "^0.0.5",
     "minimist": "^1.2.5",
-    "node-fetch": "^2.6.1",
+    "node-fetch": "^3.1.1",
     "prompts": "2.4.1",
     "tar": "^6.0.5",
     "webpack": "^5.1.1",
